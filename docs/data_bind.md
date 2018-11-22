@@ -92,4 +92,3 @@ export class AppComponent {
 > ``#titleInput``为一个引用模版  
 > titleInput.value为改前端元素的value值；
 
-
