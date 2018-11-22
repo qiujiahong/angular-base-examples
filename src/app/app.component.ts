@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-course';
+  data={
+    title: 'Angular'
+  };
+  onClickFun(){
+    alert("img click.");
+  }
+
+  onKeyUp(newTitle :string) {
+    this.data.title = newTitle;
+  }
 }
