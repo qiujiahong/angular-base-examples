@@ -20,7 +20,8 @@ src/app/course-card/
 
 * ts文件``@Component``定义了组件引用名字（selector），组件模版，组件style。
 
-```angular2
+
+```typescript
 import { Component, OnInit } from '@angular/core';
 
 @Component({

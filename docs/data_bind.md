@@ -4,7 +4,7 @@
 
 * 后端声明变量
 
-```ts
+```typescript
 export class AppComponent {
   data={
     title: 'Angular'
@@ -14,14 +14,14 @@ export class AppComponent {
 
 * 前端用花括号包含变量名
 
-```angular2
+```html
 Hi {{ data.title }}!
 ```
 
 
 ## 前端数据绑定到后端变量
 
-```angular2
+```html
 <input class="demo" [value]="data.title">
 ```
 
@@ -56,7 +56,7 @@ export class AppComponent {
 
 * 前端
 
-```angular2
+```html
 <div style="text-align:center">
   <h1>
     Hi {{ data.title }}!
@@ -73,7 +73,7 @@ export class AppComponent {
 
 * 后端
 
-```angular2
+```typescript
 export class AppComponent {
   data={
     title: 'Angular'
