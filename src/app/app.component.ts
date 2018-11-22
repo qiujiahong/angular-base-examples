@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {COURSES} from "../db-data";
 
 
 @Component({
@@ -8,6 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  coreCourse = COURSES[0];
 
+  rxjsCourse = COURSES[1];
+
+  ngrxCourse = COURSES[2];
 
 }
