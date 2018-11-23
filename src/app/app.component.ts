@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {COURSES} from "../db-data";
+import {Course} from "./model/Course";
 
 
 @Component({
@@ -15,4 +16,7 @@ export class AppComponent {
 
   ngrxCourse = COURSES[2];
 
+  onCouseSelected(course:Course) {
+    console.log("app component - click event ",course);
+  }
 }
