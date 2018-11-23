@@ -10,11 +10,7 @@ import {Course} from "./model/Course";
 })
 export class AppComponent {
 
-  coreCourse = COURSES[0];
-
-  rxjsCourse = COURSES[1];
-
-  ngrxCourse = COURSES[2];
+  courses = COURSES;
 
   onCouseSelected(course:Course) {
     console.log("app component - click event ",course);
