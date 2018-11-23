@@ -5,9 +5,7 @@
 
 <h1>{{coreCourse.description}}</h1>
 <div class="courses">
-  <app-course-card
-    (courseSelected)="onCouseSelected($event)"
-    [course]="coreCourse"></app-course-card>
-  <app-course-card [course]="rxjsCourse"></app-course-card>
-  <app-course-card [course]="ngrxCourse"></app-course-card>
+  <app-course-card (courseSelected)="onCouseSelected($event)" [course]="coreCourse"></app-course-card>
+  <app-course-card (courseSelected)="onCouseSelected($event)" [course]="rxjsCourse"></app-course-card>
+  <app-course-card (courseSelected)="onCouseSelected($event)" [course]="ngrxCourse"></app-course-card>
 </div>
