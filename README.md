@@ -7,3 +7,4 @@
 * [为组件添加配置属性@Input()](./docs/config_prop.md)
 * [自定义事件@Output](./docs/custom_event.md)
 * [ngFor](./docs/ngFor.md)
+* [ngIf](./docs/ngIf.md)

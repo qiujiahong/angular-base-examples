@@ -29,3 +29,12 @@
 ```
 
 
+* index: number：可迭代对象中当前条目的索引。
+
+* first: boolean：如果当前条目是可迭代对象中的第一个条目则为 true。
+
+* last: boolean：如果当前条目是可迭代对象中的最后一个条目则为 true。
+
+* even: boolean：如果当前条目在可迭代对象中的索引号为偶数则为 true。
+
+* odd: boolean：如果当前条目在可迭代对象中的索引号为奇数则为 true。
