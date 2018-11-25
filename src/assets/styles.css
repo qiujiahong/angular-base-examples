@@ -37,27 +37,27 @@ button {
   border-radius: 4px;
 }
 
-app-course-card.is-first {
-  border-top: 2px solid #ff8080;
-  padding-top: 20px;
-}
+/*app-course-card.is-first {*/
+  /*border-top: 2px solid #ff8080;*/
+  /*padding-top: 20px;*/
+/*}*/
 
-app-course-card.is-last {
-  border-bottom: 2px solid grey;
-  padding-top: 20px;
-}
+/*app-course-card.is-last {*/
+  /*border-bottom: 2px solid grey;*/
+  /*padding-top: 20px;*/
+/*}*/
 
-app-course-card.is-even {
-  background: lightgray;
-}
+/*app-course-card.is-even {*/
+  /*background: lightgray;*/
+/*}*/
 
-app-course-card.is-odd {
-  background: lightcyan;
-}
+/*app-course-card.is-odd {*/
+  /*background: lightcyan;*/
+/*}*/
 
-.course-category {
-  margin-top: 15px;
-}
+/*.course-category {*/
+  /*margin-top: 15px;*/
+/*}*/
 
 .category {
   margin-top: 15px;

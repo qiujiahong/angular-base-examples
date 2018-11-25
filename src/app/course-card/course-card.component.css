@@ -1,0 +1,4 @@
+/*同时有.course-card和.beginner样式的元素*/
+.course-card.beginner{
+  background: lightsalmon;
+}
