@@ -9,3 +9,6 @@
 * [ngFor](./docs/ngFor.md)
 * [ngIf](./docs/ngIf.md)
 * [ngClass](./docs/ngClass.md)
+* [ngStyle](./docs/ngStyle.md)
+* [ngSwitch](./docs/ngSwitch.md)
+
