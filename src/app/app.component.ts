@@ -1,6 +1,8 @@
 import {Component} from '@angular/core';
 import {COURSES} from "../db-data";
 import {Course} from "./model/Course";
+import {HttpClient} from "@angular/common/http";
+
 
 
 @Component({
@@ -12,12 +14,18 @@ export class AppComponent {
 
   courses = COURSES;
 
-  startDate = new Date(2018, 12, 1);
-  title = COURSES[0].description;
-  price = 9.99;
-  rate = 0.85;
+  constructor(private http: HttpClient){
 
-  course = COURSES[0];
+  }
+  ngOnInit(){
+    this.http.get('/courses/courses').subscribe(
+      val =>console.log(val)
+    );
+
+    // this.http.get('http://localhost:3000/courses').subscribe(
+    //   val =>console.log(val)
+    // );
+  }
 
   onCouseSelected(course: Course) {
     console.log("app component - click event ", course);
