@@ -3,13 +3,7 @@
        src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png">
 </div>
 
-<div class="courses">
-  <app-course-card *ngFor="let course of courses| slice:0:2;index as i; first as isFirst; last as isLast;
-                    even as isEven; odd as isOdd"
-                   [class.is-first]="isFirst"
-                   [class.is-last]="isLast"
-                   [class.is-even]="isEven"
-                   [class.is-odd]="isOdd"
-                   (courseSelected)="onCouseSelected($event)"
-                   [course]="course" [cardIndex]="i+1"></app-course-card>
+<div class="courses" *ngIf="courses$ | async as courses">
+  <app-course-card *ngFor="let course of courses"
+                   [course]="course" ></app-course-card>
 </div>
