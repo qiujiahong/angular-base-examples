@@ -14,6 +14,7 @@
 * [内嵌pips](./docs/pips.md)
 * [Services](./docs/service.md)
   * [http获取数据](./docs/httpClient.md)
+  * [自定义service](./docs/custom_service.md)
 
 
 

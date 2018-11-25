@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {Course} from "./model/Course";
 import {HttpClient, HttpParams} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {CoursesService} from "./services/courses.service";
 
 
 
@@ -15,7 +16,8 @@ export class AppComponent {
   courses$: Observable<Course[]>;
   // courses;
 
-  constructor(private http: HttpClient){
+  constructor(private http: HttpClient,
+              private coursesService: CoursesService){
 
   }
   ngOnInit(){
@@ -47,5 +49,5 @@ export class AppComponent {
     // );
   }
 
-  
+
 }
