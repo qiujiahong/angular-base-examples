@@ -1,5 +1,5 @@
 {
-  "/courses": {
+  "/api": {
     "target": "http://localhost:3000/courses",
     "secure": false
   }

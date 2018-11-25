@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
-import {COURSES} from "../db-data";
 import {Course} from "./model/Course";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpParams} from "@angular/common/http";
 
 
 
@@ -12,15 +11,25 @@ import {HttpClient} from "@angular/common/http";
 })
 export class AppComponent {
 
-  courses = COURSES;
+  courses;
 
   constructor(private http: HttpClient){
 
   }
   ngOnInit(){
-    this.http.get('/courses/courses').subscribe(
-      val =>console.log(val)
+
+    //带参数
+    const params = new HttpParams()
+      .set("_page","1")
+      .set("_limit","3");
+    this.http.get('/api/courses',{params}).subscribe(
+      courses => this.courses = courses
     );
+
+    //无参数
+    // this.http.get('/api/courses').subscribe(
+    //   courses => this.courses = courses
+    // );
 
     // this.http.get('http://localhost:3000/courses').subscribe(
     //   val =>console.log(val)
