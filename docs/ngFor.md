@@ -38,3 +38,28 @@
 * even: boolean：如果当前条目在可迭代对象中的索引号为偶数则为 true。
 
 * odd: boolean：如果当前条目在可迭代对象中的索引号为奇数则为 true。
+
+
+* 需要添加如下样式,app-course-card.is-first 代表app-course-card组件下有.is-first样式的组件
+
+```css
+app-course-card.is-first 
+{
+  border-top: 2px solid #ff8080;
+  padding-top: 20px;
+}
+
+app-course-card.is-last {
+  border-bottom: 2px solid grey;
+  padding-top: 20px;
+}
+
+app-course-card.is-even {
+  background: lightgray;
+}
+
+app-course-card.is-odd {
+  background: lightcyan;
+}
+
+```
