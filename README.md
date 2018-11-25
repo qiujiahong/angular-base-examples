@@ -12,4 +12,6 @@
 * [ngStyle](./docs/ngStyle.md)
 * [ngSwitch](./docs/ngSwitch.md)
 * [内嵌pips](./docs/pips.md)
+* [Services](./docs/service.md)
+
 

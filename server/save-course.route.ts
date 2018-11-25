@@ -1,4 +1,3 @@
-
 import {Request, Response} from 'express';
 import {findCourseById} from '../src/db-data';
 
