@@ -3,6 +3,9 @@ app-course-card{
   display: block;
 }
 
+.demo{
+  align-items: center;
+}
 .course-card {
   margin-bottom: 40px;
   text-align: center;
