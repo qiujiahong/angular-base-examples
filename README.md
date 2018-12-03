@@ -12,9 +12,8 @@
 * [ngStyle](./docs/ngStyle.md)
 * [ngSwitch](./docs/ngSwitch.md)
 * [内嵌pips](./docs/pips.md)
+* [ViewChild指令](./docs/ViewChild.md)
 * [Services](./docs/service.md)
   * [http获取数据](./docs/httpClient.md)
   * [自定义service](./docs/custom_service.md)
-
-
 

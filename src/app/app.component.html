@@ -4,6 +4,11 @@
 </div>
 
 <div class="courses" *ngIf="courses$ | async as courses">
-  <app-course-card *ngFor="let course of courses"
-                   [course]="course" ></app-course-card>
+  <app-course-card
+    (courseSelected)="onCourseSelected($event)"
+                   [course]="courses[0]"   ></app-course-card>
+  <app-course-card
+    (courseSelected)="onCourseSelected($event)"
+                   [course]="courses[1]"  ></app-course-card>
+
 </div>
