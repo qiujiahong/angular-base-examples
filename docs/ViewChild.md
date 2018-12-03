@@ -59,3 +59,15 @@
   }
 ```
 
+
+## 最早可访问ViewChild注解变量时间
+
+
+* 组件继承 AfterViewInit 
+
+* 实现该接口的方法``ngAfterViewInit(): void ``；
+
+* 该方法为组件内最早可以访问时间；
+
+
+

@@ -1,4 +1,4 @@
-import {Component, ElementRef, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
 import {Course} from "./model/Course";
 import {HttpClient, HttpParams} from "@angular/common/http";
 import {Observable} from "rxjs";
@@ -12,7 +12,7 @@ import { CourseCardComponent } from './course-card/course-card.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent  implements AfterViewInit{
 
   courses$: Observable<Course[]>;
 
@@ -39,6 +39,12 @@ export class AppComponent {
   }
   ngOnInit(){
     this.courses$ =  this.coursesService.loadCourses();
+  }
+
+  ngAfterViewInit(): void {
+    console.log(this.card1);
+    console.log(this.card2);
+    console.log(this.containerDiv)
   }
 
 }
