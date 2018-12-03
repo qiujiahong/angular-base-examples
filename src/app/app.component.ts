@@ -1,4 +1,4 @@
-import {Component, ViewChild} from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 import {Course} from "./model/Course";
 import {HttpClient, HttpParams} from "@angular/common/http";
 import {Observable} from "rxjs";
@@ -16,12 +16,23 @@ export class AppComponent {
 
   courses$: Observable<Course[]>;
 
-  @ViewChild(CourseCardComponent)
-  card: CourseCardComponent;
+  @ViewChild('container')
+  containerDiv: ElementRef;
+
+  // @ViewChild(CourseCardComponent)
+  // card: CourseCardComponent;
+
+  @ViewChild('cardRef1',{read: ElementRef})
+  card1: CourseCardComponent;
+  @ViewChild('cardRef2')
+  card2: CourseCardComponent;
 
   onCourseSelected(course: Course){
-    console.log(this.card);
-    this.card.course.description="hello";
+    console.log(this.card1);
+    
+    console.log(this.card2);
+
+    console.log(this.containerDiv)
   }
 
   constructor(private coursesService: CoursesService){
