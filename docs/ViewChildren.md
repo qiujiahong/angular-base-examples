@@ -70,3 +70,5 @@ this.cards.changes.subscribe(
 ```
 
 
+## [完整代码](https://github.com/qiujiahong/angular-base-examples/tree/ViewChildren)
+
