@@ -5,11 +5,11 @@
 
 <button (click)="onCourseEdit()">Edit Course</button>
 
-<div class="courses"  #container>
-
-  <app-course-card *ngFor="let course of courses"
-                   (courseSelected)="onCourseSelected($event)"
-                    [course]="course">
+<div class="courses" *ngIf="courses[0] as course">
+  <app-course-card
+    (courseSelected)="onCourseSelected($event)"
+    [course]="course">
+    <img width="300" alt="Angular Logo" [src]="course.iconUrl">
   </app-course-card>
 
 </div>
