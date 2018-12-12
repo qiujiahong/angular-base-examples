@@ -5,17 +5,14 @@
   {{cardIndex || '' + ' ' +course.description}}
   </div>
 
-  <ng-content></ng-content>
-  <!--<img width="300" alt="Angular Logo" *ngIf="course.iconUrl; else noImage"-->
-  <!--[src]="course.iconUrl">-->
+  <ng-content select=".course-image"></ng-content>
 
-  <!--<ng-template #noImage >-->
-  <!--<p>no image is available.</p>-->
-  <!--</ng-template>-->
+  <ng-content select=".course-description"></ng-content>
+  <ng-content ></ng-content>
 
-  <div class="course-description">
-  {{course.longDescription}}
-  </div>
+  <!--<div class="course-description">-->
+  <!--{{course.longDescription}}-->
+  <!--</div>-->
   <div class="course-category" [ngSwitch]="course.category">
     <div class="cateory" *ngSwitchCase="'BEGINNER'">Beginner</div>
     <div class="cateory" *ngSwitchCase="'INTERMEDIATE'">Intermediate</div>
