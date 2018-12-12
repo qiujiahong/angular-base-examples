@@ -60,3 +60,5 @@ ng-content能够实现组件内部插入一段html，然后再插入到组件内
 
 
 
+
+## [完整代码](https://github.com/qiujiahong/angular-base-examples/tree/ng-content)
