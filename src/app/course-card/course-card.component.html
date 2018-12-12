@@ -1,11 +1,11 @@
 <div class="course-card"
-     [ngClass]="cardClasses()" >
+     [ngClass]="cardClasses()"  #container>
 
   <div class="course-title" [ngStyle]="cardStyles()">
   {{cardIndex || '' + ' ' +course.description}}
   </div>
 
-  <ng-content select=".course-image"></ng-content>
+  <ng-content select="app-course-image"></ng-content>
 
   <ng-content select=".course-description"></ng-content>
   <ng-content ></ng-content>

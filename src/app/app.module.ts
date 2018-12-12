@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CourseCardComponent } from './course-card/course-card.component';
 import {HttpClientModule} from "@angular/common/http";
+import { CourseImageComponent } from './course-image/course-image.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CourseCardComponent
+    CourseCardComponent,
+    CourseImageComponent
   ],
   imports: [
     BrowserModule,

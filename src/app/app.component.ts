@@ -36,7 +36,7 @@ export class AppComponent implements AfterViewInit{
     this.cards.changes.subscribe(
       cards => console.log(cards)
     )
-    console.log(this.cards);
+    // console.log(this.cards);
   }
 
   onCourseEdit() {

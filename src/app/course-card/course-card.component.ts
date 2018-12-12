@@ -1,12 +1,13 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {AfterViewInit, Component, ContentChild, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Course} from "../model/Course";
+import {CourseImageComponent} from "../course-image/course-image.component";
 
 @Component({
   selector: 'app-course-card',
   templateUrl: './course-card.component.html',
   styleUrls: ['./course-card.component.css']
 })
-export class CourseCardComponent implements OnInit {
+export class CourseCardComponent implements OnInit ,AfterViewInit{
 
   @Input()
   course: Course;
@@ -16,6 +17,9 @@ export class CourseCardComponent implements OnInit {
 
   @Output()
   courseSelected = new EventEmitter<Course>();
+
+  @ContentChild(CourseImageComponent)
+  image: CourseImageComponent;
 
   constructor() {
   }
@@ -38,5 +42,9 @@ export class CourseCardComponent implements OnInit {
 
   cardStyles() {
     return {'text-decoration':'underline'};
+  }
+
+  ngAfterViewInit(): void {
+    console.log(this.image);
   }
 }
