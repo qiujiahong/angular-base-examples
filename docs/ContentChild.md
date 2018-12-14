@@ -59,3 +59,6 @@ export class CourseImageComponent implements OnInit {
 ## [代码](https://github.com/qiujiahong/angular-base-examples/tree/ContentChild)
 
 
+
+
+> ContentChildren，和ViewChildren的用法差不太多。

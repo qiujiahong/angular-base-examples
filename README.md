@@ -16,6 +16,7 @@
 * [ViewChildren](./docs/ViewChildren.md)
 * [ng-content](./docs/ng-content.md)
 * [ContentChild指令](./docs/ContentChild.md)
+* [ng-template](./docs/ng-template.md)
 * [Services](./docs/service.md)
   * [http获取数据](./docs/httpClient.md)
   * [自定义service](./docs/custom_service.md)
