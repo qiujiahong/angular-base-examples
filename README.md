@@ -18,7 +18,10 @@
 * [ContentChild指令](./docs/ContentChild.md)
 * [ng-template](./docs/ng-template.md)
 * [ngTemplateOutlet](./docs/ngTemplateOutlet.md)
+* [Attribute Directives](./docs/Attribute_Directives.md)
 * [Services](./docs/service.md)
   * [http获取数据](./docs/httpClient.md)
   * [自定义service](./docs/custom_service.md)
+  
+ 
 
