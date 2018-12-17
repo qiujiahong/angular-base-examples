@@ -7,7 +7,7 @@
 <div class="courses" *ngIf="courses[0] as course">
 
 
-  <app-course-card appHighlighted
+  <app-course-card [appHighlighted]="true"
     (courseSelected)="onCourseSelected($event)"
     [course]="course">
     <app-course-image [src]="course.iconUrl"></app-course-image>
