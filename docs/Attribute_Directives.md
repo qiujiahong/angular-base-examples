@@ -50,5 +50,5 @@ export class HighlightedDirective {
 * 运行程序，可以看到控制台打印了```directive created``对应的指令被创建
 
 
-## [完整代码]()
+## [完整代码](https://github.com/qiujiahong/angular-base-examples/tree/attribute_directives)
 
