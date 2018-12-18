@@ -131,7 +131,78 @@ export class HighlightedDirective {
 
 ### 事件
 
+* highlighted.directive.ts
 
+```typescript
+import {Directive, EventEmitter, HostBinding, HostListener, Input, Output} from '@angular/core';
+
+@Directive({
+  selector: '[appHighlighted]'
+})
+export class HighlightedDirective {
+
+  @Input('appHighlighted')
+  isHighlighted = false;
+
+  @Output()
+  toggleHighlight= new EventEmitter();
+
+  constructor() {
+    console.log("directive created")
+  }
+
+  @HostBinding('class.highlighted')
+  get cssClasses(){
+    return this.isHighlighted;
+  }
+
+  @HostBinding('attr.disabled')
+  get disabled(){
+    return "true";
+  }
+
+  @HostListener('mouseover',['$event'])
+  mouseOver($event){
+    console.log($event);
+    this.isHighlighted=true;
+    this.toggleHighlight.emit(this.isHighlighted);
+  }
+
+  @HostListener('mouseleave')
+  mouseLeave(){
+    this.isHighlighted = false;
+    this.toggleHighlight.emit(this.isHighlighted);
+  }
+
+}
+
+```
+
+
+* app.component.html
+
+```html
+<div appHighlighted class="top-menu">
+  <img class="logo"
+       src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png">
+</div >
+
+
+<div class="courses" *ngIf="courses[0] as course">
+
+
+  <app-course-card [appHighlighted]="false"
+                   (toggleHighlight)="onToggle($event)"
+    (courseSelected)="onCourseSelected($event)"
+    [course]="course">
+    <app-course-image [src]="course.iconUrl"></app-course-image>
+    <div class="course-description">
+      {{course.longDescription}}
+    </div>
+  </app-course-card>
+
+</div>
+```
 
 ### 其他用法,设置attr
 
