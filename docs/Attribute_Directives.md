@@ -129,6 +129,10 @@ export class HighlightedDirective {
   }
 ```
 
+### 事件
+
+
+
 ### 其他用法,设置attr
 
 ```typescript
