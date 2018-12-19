@@ -204,6 +204,64 @@ export class HighlightedDirective {
 </div>
 ```
 
+
+### 在父组件中访问directive
+
+* highlighted.directive.ts ,添加exportAs
+
+```typescript
+import {Directive, EventEmitter, HostBinding, HostListener, Input, Output} from '@angular/core';
+
+@Directive({
+  selector: '[appHighlighted]',
+  exportAs: 'hl'
+})
+export class HighlightedDirective {
+
+  @Input('appHighlighted')
+  isHighlighted = false;
+
+  @Output()
+  toggleHighlight= new EventEmitter();
+
+  constructor() {
+    console.log("directive created")
+  }
+
+  @HostBinding('class.highlighted')
+  get cssClasses(){
+    return this.isHighlighted;
+  }
+  toggle(){
+    this.isHighlighted = !this.isHighlighted ;
+    this.toggleHighlight.emit(this.isHighlighted);
+  }
+}
+
+```
+
+* app.component.html,添加引用``#highlighter='hl'``,双击事件``(dblclick)="highlighter.toggle()"``
+
+```html
+  <app-course-card [appHighlighted]="false" #highlighter='hl'
+                   (toggleHighlight)="onToggle($event)"
+    (courseSelected)="onCourseSelected($event)"
+    [course]="course">
+    <app-course-image [src]="course.iconUrl" (dblclick)="highlighter.toggle()"></app-course-image>
+    <div class="course-description" >
+      {{course.longDescription}}
+    </div>
+  </app-course-card>
+```
+
+* app.component.ts,使用ViewChild访问
+
+```typescript
+ @ViewChild(HighlightedDirective)
+  // @ViewChild(CourseCardComponent,{read:HighlightedDirective})
+  highlighted: HighlightedDirective;
+```
+
 ### 其他用法,设置attr
 
 ```typescript

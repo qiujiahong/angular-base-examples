@@ -5,6 +5,7 @@ import {Observable} from "rxjs";
 import {CoursesService} from "./services/courses.service";
 import { CourseCardComponent } from './course-card/course-card.component';
 import {COURSES} from "../db-data";
+import {HighlightedDirective} from "./directives/highlighted.directive";
 
 
 
@@ -15,6 +16,11 @@ import {COURSES} from "../db-data";
 })
 export class AppComponent implements AfterViewInit{
   courses = COURSES;
+
+
+  @ViewChild(HighlightedDirective)
+  // @ViewChild(CourseCardComponent,{read:HighlightedDirective})
+  highlighted: HighlightedDirective;
 
   @ViewChildren(CourseCardComponent)
   cards : QueryList<CourseCardComponent>;
@@ -33,9 +39,10 @@ export class AppComponent implements AfterViewInit{
   }
 
   ngAfterViewInit(): void {
-    this.cards.changes.subscribe(
-      cards => console.log(cards)
-    )
+    console.log(this.highlighted);
+    // this.cards.changes.subscribe(
+    //   cards => console.log(cards)
+    // )
     // console.log(this.cards);
   }
 
